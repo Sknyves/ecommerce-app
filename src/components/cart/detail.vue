@@ -49,7 +49,7 @@ const totalPanier = computed(() => {
                 <td class="p-4 border border-gray-300 text-green-600 font-semibold">{{ product.price }} $</td>
                 <td class="p-4 border border-gray-300 w-auto p-auto">
                     <div class="flex items-center space-x-2 justify-center">
-                        <button class="bg-gray-200 p-2 rounded-lg hover:bg-gray-300 transition" @click="minusQtt(product)">
+                        <button v-if="product.id > 1" class="bg-gray-200 p-2 rounded-lg hover:bg-gray-300 transition" @click="minusQtt(product)">
                             <img src="./../../assets/minus.svg" alt="Moins" class="w-4">
                         </button>
                         <span class="text-lg font-medium">{{ product.qtt }}</span>
